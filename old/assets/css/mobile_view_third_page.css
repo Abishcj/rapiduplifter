@@ -1,0 +1,102 @@
+@media screen and (min-width:767px) {
+    #steps_1_3 img {
+        width: auto;
+        max-height: 200px !important;
+    }
+}
+
+@media screen and (min-width:1366px) {
+    #steps_1_3 img {
+        width: auto;
+        max-height: 200px !important;
+    }
+}
+
+@media screen and (min-width:2256px) {
+    .scroll_down_header {
+        font-size: 2.5rem !important;
+    }
+    #section_2 img {
+        width: auto !important;
+    }
+    .section3_header {
+        line-height: 1.9;
+    }
+    .privacy_header {
+        font-size: 2.5rem !important;
+    }
+    .steps_header {
+        font-size: 2.5rem !important;
+    }
+    #steps_1_3 img {
+        width: auto;
+        max-height: 267px !important;
+    }
+    #steps_4_7 img {
+        width: auto;
+        /* min-height: 270px !important; */
+        min-height: 200px !important;
+        max-height: 200px !important;
+    }
+}
+
+
+/* -------------- */
+
+@media screen and (max-width:767px) {
+    .main h1 {
+        font-size: 1.5rem !important;
+        padding: 20px;
+    }
+    #main_a {
+        margin-bottom: 10px;
+    }
+    .scroll_down_header {
+        padding: 10px;
+        font-size: 1rem !important;
+        margin: 0;
+    }
+    .section3_header {
+        font-size: 1.3rem !important;
+        text-align: center;
+    }
+    .col-pic {
+        text-align: center;
+    }
+    .img-right {
+        width: auto !important;
+        height: auto !important;
+    }
+    .privacy_header {
+        font-weight: normal !important;
+        font-size: 1.5rem !important;
+    }
+    .privacy_col {
+        margin: 10px !important;
+        padding: 10px !important;
+    }
+    .understand_header {
+        font-size: 1.3rem !important;
+    }
+    .steps_header {
+        font-size: 1.3rem !important;
+    }
+    #steps_1_3 img,
+    #steps_4_7 img {
+        width: 60% !important;
+        margin: 10px 0 10px 0 !important;
+    }
+    #section_6 h2 {
+        padding: 10px;
+        font-size: 1.3rem !important;
+    }
+    #section_6 span {
+        font-size: 2.5rem !important;
+    }
+    #section_6 .col-md-4 {
+        margin: 10px 0;
+    }
+    #section_6 span.additional_costs {
+        font-size: 1rem !important;
+    }
+}
