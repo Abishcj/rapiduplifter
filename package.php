@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+//$_SESSION['name']
 ?>
 
 <style>
@@ -104,7 +104,7 @@ session_start();
 		justify-content: space-between;
 	}
 
-	.hero-text {
+	/* .hero-text {
 		position: absolute;
 		margin-top: -600px;
 		color: orange;
@@ -113,13 +113,13 @@ session_start();
 		margin-left: 600px;
 
 
-	}
+	} */
 
-	.hero {
+	/* .hero {
 		position: relative;
 
 
-	}
+	} */
 
 	/*@media only screen and (max-width:900px) {
     body {
@@ -199,6 +199,32 @@ session_start();
     }
     
 }*/
+	#bannerimage {
+		width: 100%;
+		background-image: url(./assets/images/567.jpg);
+		height: 300px;
+		background-color: purple;
+		background-position: center;
+		/* background-repeat: no-repeat; */
+		background-size: cover;
+		object-fit: cover;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#header {
+		/* background: #664c8f; */
+		height: auto;
+		/* padding: 100px 100px */
+	}
+
+	h1 {
+		color: orange;
+		font-family: Arial, Helvetica;
+		text-align: center;
+
+	}
 </style>
 <?php
 include "header.php";
@@ -228,26 +254,40 @@ $res = mysqli_query($conn, $sql);
                 </div>
             </div>
         </div>-->
+	<!-- <div class="container-fluid ">
+		<div class="row  ">
+			<div class="col-md-4 hero  ">
+				<img class="banner" src="./assets/images/567.jpg" alt="">-->
+	<!-- <div class="hero-text "> -->
+
+	<!-- <p>Travel is</p>
+				<p>AN INVESTMENT
+
+				<p>in yourself</p> -->
+
+
+
+	<!-- </div> -->
+
+
+	<!-- </div>
+		</div>  -->
 	<div class="container-fluid ">
-		<div class="row myrow ">
-			<div class="col-md4 hero  ">
-				<img class="banner" src="./assets/images/567.jpg" alt="">
-				<div class="hero-text ">
-					<center>
-						<p>Travel is</p>
-						<p>AN INVESTMENT
+		<div id="bannerimage">
+			<span id="header mt-4">
+				<h1>
+					<!-- Travel is<br><br>
+					AN INVESTMENT<br><br>
+					in yourself -->
+					Welcome<?php
+							//echo $_SESSION["name"] . date("d M Y H:i");
+							?>
 
-						<p>in yourself</p>
-						<?php
-						//echo $_SESSION["name"] . date("d M Y H:i");
-						?>
-					</center>
+				</h1>
+			</span>
 
-				</div>
-
-
-			</div>
 		</div>
+
 
 		<!-- <div class="row ">
 			<div class="col-md-12">
@@ -260,6 +300,7 @@ $res = mysqli_query($conn, $sql);
 		<div class="row mt-2">
 			<?php while ($data = mysqli_fetch_assoc($res)) { ?>
 				<div class="col-md-4 mycol">
+
 					<div class="card-sl">
 						<div class="card-image">
 							<img src="./admin/assets/picture/<?php echo $data['photo']; ?>" class="card-img-top mycard" alt="">
@@ -285,6 +326,8 @@ $res = mysqli_query($conn, $sql);
 			}
 			$conn->close();
 			?>
+		</div>
+	</div>
 </section>
 <?php
 include "footer.php";
@@ -300,10 +343,10 @@ include "footer.php";
 	);
 	document.querySelectorAll('.link').forEach(function(link) {
 		link.addEventListener('click', function() {
-			// var x = "<?php //echo $resultcheck;
+			var x = "<?php //echo $resultcheck;  
 						?> "
-			// var my = "<?php //echo $gcheck; 
-							?> "
+			var my = "<?php //echo $gcheck;     
+						?> "
 
 
 			// if (x > 0 || my > 0) {
@@ -328,6 +371,12 @@ include "footer.php";
 		// 	location.replace('login.php')
 		// 	//header("location:login.php");
 		// }
+
+
+
+
+
+
 
 
 

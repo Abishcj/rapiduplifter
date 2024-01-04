@@ -19,10 +19,18 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
 
 	if (empty($uname)) {
-		header("location:index.php?error=User Name is required ");
+		echo "<script>
+		alert('Failed=@***User Name is required');
+		window.location.href='./signin.php';
+		</script>";
+		// header("location:signin.php?error=User Name is required ");
 		exit();
 	} elseif (empty($password)) {
-		header("location:index.php?error=Password is required ");
+		echo "<script>
+		alert('failed=@****Password is required');
+		window.location.href='./signin.php';
+		</script>";
+		// header("location:signin.php?error=Password is required ");
 		exit();
 	} else {
 		$sql = "SELECT * FROM signup_details WHERE email ='$uname' AND password='$password' ";
@@ -37,11 +45,19 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 				header("location:package.php ");
 				exit();
 			} else {
-				header("location:index.php?error=Incorrect User name or Password ");
+				echo "<script>
+				alert('Failed= ***&Incorrect User name or password');
+				window.location.href='./signin.php';
+				</script>";
+
 				exit();
 			}
 		} else {
-			header("location:index.php?error=Incorrect User name or Password ");
+
+			echo "<script>
+			alert('Failed=@***Incorrect User nameor password');
+			window.location.href='./signin.php';
+			</script>";
 			exit();
 		}
 	}

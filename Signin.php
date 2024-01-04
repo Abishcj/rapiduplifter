@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 	<?php
 	include "./header.php";
-	include "./db.php";
+	// include "./db.php";
 	?>
 	<style>
 		.logo {
@@ -130,7 +130,7 @@
 				<div class="form-check d-flex justify-content-center">
 					<input type="checkbox">
 					<label class="form-check-label mx-2">Remember me</label>
-					<a href="#" class="mx-4 fgtpss">forget password?</a>
+					<!-- <a href="#" class="mx-4 fgtpss">forget password?</a> -->
 				</div>
 				<br>
 				<div class="text-center">
@@ -163,4 +163,4 @@
 	</script>
 </body>
 
-</html>l>
+</html>

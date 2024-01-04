@@ -139,7 +139,7 @@
 								Sigin
 							</button>
 							<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-								<button class="dropdown-item text-dark bg-light" type="button">ddd</button>
+								<button class="dropdown-item text-dark bg-light" type="button"><a href="./logout.php">Logout</a></button>
 								<button class="dropdown-item" type="button"><a class="" href="./signup.php">signup</a></button>
 								<button class="dropdown-item" type="button"><a class="" href="./signin.php">signin</a></button>
 							</div>

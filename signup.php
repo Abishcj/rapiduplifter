@@ -21,11 +21,11 @@
 		$confrimpassword = $_POST['confrimpassword'];
 		if (empty($_POST['firstname'] . $_POST['lastname'])) {
 			$msgs = "( * Name is required)";
-		}
-		if (empty($_POST['email'])) {
+		} else if (empty($_POST['email'])) {
 			$msgsa = "(* Email is required)";
-		}
-		if ($password != $confrimpassword) {
+		} else	if (empty($_POST['password'])) {
+			$msg = "(* password doesn't match or password is required)";
+		} else	if ($password != $confrimpassword) {
 			$msg = "(* password doesn't match or password is required)";
 		} else {
 			$sql = "INSERT INTO `signup_details`(`firstname`, `lastname`, `email`, `password`,`name`) VALUES ( '$firstname', '$lastname', '$email', '$password','$email')";
@@ -218,6 +218,7 @@
 				eyeicon2.style.color = 'red';
 			} else {
 				password2.type = "password";
+
 				eyeicon2.style.color = 'black';
 			}
 		}
