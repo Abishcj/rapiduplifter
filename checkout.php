@@ -12,7 +12,8 @@ if (isset($_POST['id'])) {
 	$amount1 = preg_replace('/[^A-Za-z0-9]/', '', $amount);
 	$price = $amount1 * 100;
 	require 'vendor/autoload.php';
-	\Stripe\Stripe::setApiKey('sk_test_51MxoMDSHmUtmPHhdaVEAuDuJ4TRklpIIOQ90rNNAYhBh4JyHu2Jm60UFjWibPN23NkzBBgnSKHWOVSquldlXmCme00yM8bOkTD');
+	// \Stripe\Stripe::setApiKey('sk_test_51MxoMDSHmUtmPHhdaVEAuDuJ4TRklpIIOQ90rNNAYhBh4JyHu2Jm60UFjWibPN23NkzBBgnSKHWOVSquldlXmCme00yM8bOkTD');
+	\Stripe\Stripe::setApiKey('sk_test_51MVtNdBnZtwibCToePIELpq9OKQnwjcEDjo8TiUyJ46My9eeRWdPPJpU32EgVSQV6lrWuO6Mhri4M1pKLUlWltdA00XOMCvJFR');
 	header('Content-Type: application/json');
 	$YOUR_DOMAIN = 'http://localhost/rapid/';
 	$checkout_session = \Stripe\Checkout\Session::create([

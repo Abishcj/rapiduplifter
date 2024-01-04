@@ -1,3 +1,6 @@
+<?php //session_start();
+// $name = $_SESSION['eamil'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -130,13 +133,25 @@
 						<a class="nav-link expand" href="./ContactUs.php">Contact Us</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link expand" href="./logout.php">Logout</a>
+						<!-- <a class="nav-link expand btn btn-danger" href="./logout.php">Logout</a> -->
+						<div class="dropdown">
+							<button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Sigin
+							</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+								<button class="dropdown-item text-dark bg-light" type="button">ddd</button>
+								<button class="dropdown-item" type="button"><a class="" href="./signup.php">signup</a></button>
+								<button class="dropdown-item" type="button"><a class="" href="./signin.php">signin</a></button>
+							</div>
+						</div>
 					</li>
-					<li class="nav-item">
+					<!-- <li class="nav-item">
 						<a class="nav-link expand" href="./signin.php">signin</a>
-					</li>
+					</li> -->
+
 
 				</ul>
+
 
 			</div>
 		</nav>

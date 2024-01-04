@@ -11,14 +11,22 @@
 	include "./header.php";
 	include "./db.php";
 	$msg = null;
+	$msgs = null;
+	$msgsa = null;
 	if (isset($_POST['submit'])) {
 		$firstname = $_POST['firstname'];
 		$lastname = $_POST['lastname'];
 		$email = $_POST['email'];
 		$password = $_POST['password'];
 		$confrimpassword = $_POST['confrimpassword'];
+		if (empty($_POST['firstname'] . $_POST['lastname'])) {
+			$msgs = "( * Name is required)";
+		}
+		if (empty($_POST['email'])) {
+			$msgsa = "(* Email is required)";
+		}
 		if ($password != $confrimpassword) {
-			$msg = "(password doesn't match)";
+			$msg = "(* password doesn't match or password is required)";
 		} else {
 			$sql = "INSERT INTO `signup_details`(`firstname`, `lastname`, `email`, `password`,`name`) VALUES ( '$firstname', '$lastname', '$email', '$password','$email')";
 			$result = $conn->query($sql);
@@ -37,16 +45,16 @@
 			height: 50%;
 		}
 
-		a {
+		.siginup a {
 			text-decoration: none !important;
 			color: #5A514F;
 		}
 
-		a:hover {
+		.siginup a:hover {
 			color: red;
 		}
 
-		button {
+		.siginup button {
 			background: linear-gradient(93deg, #FFE4B5 0%, rgba(255, 228, 181, 0.66) 100%);
 		}
 
@@ -129,7 +137,7 @@
 </head>
 
 <body>
-	<div class="container my-5">
+	<div class="container siginup my-5">
 		<div class="row">
 			<div class="col-6 section1 text-center bg-image">
 				<img class="logo" src="./assets/images/logo.svg">
@@ -146,7 +154,7 @@
 				<p class="text-center">Hey! We have made this form reakky small so that its easy
 					but that means all fields are mandatory &#128522;</p>
 				<br>
-				<label>How should we call you ?</label>
+				<label>How should we call you ?<span style="color: red;"><?php echo $msgs ?></span></label>
 				<div class="form-row">
 					<div class="form-group col">
 						<input type="text" class="form-control bdradius" placeholder="Firstname" name="firstname">
@@ -157,10 +165,10 @@
 						<label><small>Must be at least 4 characters</small></label>
 					</div>
 				</div>
-				<label>So how should we contact you ?</label>
+				<label>So how should we contact you ?<span style="color:red"><?php echo $msgsa ?></span></label>
 				<div class="form-row">
 					<div class="form-group col">
-						<input type="text" class="form-control bdradius" placeholder="Your Email address please" name="email">
+						<input type="email" class="form-control bdradius" placeholder="Your Email address please" name="email">
 					</div>
 				</div>
 				<label>Enter your Password <span style="color: red;"><?php echo $msg ?></span></label>
@@ -216,4 +224,4 @@
 	</script>
 </body>
 
-</html>
+</html>l>

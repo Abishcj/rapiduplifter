@@ -1,5 +1,5 @@
 <?php
-//session_start()
+session_start();
 
 ?>
 
@@ -209,18 +209,7 @@ include_once 'db.php';
 <?php
 $sql = "SELECT * FROM `package` WHERE `status`=1";
 $res = mysqli_query($conn, $sql);
-// $name = $_SESSION['mail'];
-// $pass = $_SESSION['pass'];
-
-// $log = "select * from myregister where email='$name' and password='$pass'";
-// $result = mysqli_query($conn, $log);
-// $resultcheck = mysqli_num_rows($result);
-
-// $gmail = $_SESSION["email"];
-// $gname = $_SESSION["name"];
-// $seclog = "select * from gcredential where email='$gmail' and name='$gname'";
-// $gres = mysqli_query($conn, $seclog);
-// $gcheck = mysqli_num_rows($gres);
+// 
 ?>
 <section>
 	<!--<div class="my" style="margin-top: 10px;">
@@ -306,14 +295,15 @@ include "footer.php";
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 	var stripe = Stripe(
-		"pk_test_51MxoMDSHmUtmPHhdBsulLPFprIByEfD8r6zJf5a8XfQE4L4ysQztAM6DiGMEoZaPEF4hBzS6CaVM4smoNp3EECnj00Ed6wvZIc"
+		//"pk_test_51MxoMDSHmUtmPHhdBsulLPFprIByEfD8r6zJf5a8XfQE4L4ysQztAM6DiGMEoZaPEF4hBzS6CaVM4smoNp3EECnj00Ed6wvZIc"
+		"pk_test_51MVtNdBnZtwibCToxrLZPsaD59StXHoKnOuznzxxim276klhXpOmB8Aa2JU1eaWiUEXxJ7XWp5jeAPIVWoJd6nNl00VpaW9ZiH"
 	);
 	document.querySelectorAll('.link').forEach(function(link) {
 		link.addEventListener('click', function() {
-			// var x = "<?php //echo $resultcheck; 
-						?>"
+			// var x = "<?php //echo $resultcheck;
+						?> "
 			// var my = "<?php //echo $gcheck; 
-							?>"
+							?> "
 
 
 			// if (x > 0 || my > 0) {
@@ -338,6 +328,7 @@ include "footer.php";
 		// 	location.replace('login.php')
 		// 	//header("location:login.php");
 		// }
+
 
 
 
