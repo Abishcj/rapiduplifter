@@ -42,7 +42,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 				$_SESSION['email'] = $row['email'];
 				$_SESSION['name'] = $row['name'];
 				$_SESSION['id'] = $row['id'];
-				header("location:package.php ");
+				header("location:packages_view.php ");
 				exit();
 			} else {
 				echo "<script>

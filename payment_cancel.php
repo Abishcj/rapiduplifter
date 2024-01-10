@@ -3,5 +3,5 @@
 // use Stripe\Terminal\Location;
 
 
-header('Location:./package.php');
+header('Location:./packages_view.php');
 // '<script>alert("Your payment Unsuccess")</script>';

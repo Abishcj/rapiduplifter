@@ -1,15 +1,12 @@
 <?php
-session_start();
-//$mail = $_SESSION['mail'];
+// session_start();
+// $name = $_SESSION['name'];
 include "./header.php";
 
-include_once "db.php";
-// $sql="select * from myregister where email='$mail' ";
+
+// $sql="select * from myregister where email='$name' ";
 // $res=mysqli_query($conn,$sql);
 // $check=mysqli_fetch_assoc($res);
-
-
-
 
 ?>
 <section>
@@ -25,3 +22,17 @@ include_once "db.php";
 			</div>
 		</div>
 	</div>
+</section>
+<?php
+// include_once "db.php";
+// $name = $_SESSION['name'];
+//echo $name;
+// $package = $_SESSION['my'];
+// $sql = "INSERT INTO `pur_history`(`name`, `Package`) VALUES('$name','$package')";
+// $result = $conn->query($sql);
+// if ($result == TRUE) {
+// 	header("Location:clearses.php");
+// } else {
+// 	echo 'error';
+// }
+?>

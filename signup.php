@@ -143,7 +143,7 @@
 				<img class="logo" src="./assets/images/logo.svg">
 				<div class="container">
 					<span class="badge bg-success">
-						<h1>Hi There</h1>
+						<h1>Hi There </h1>
 					</span>
 					<h2 class="mt-3">Join Us to find our next exciting Career</h2>
 					<h4>Sign up today and lets begin the Search! Lets find your true worth.</h4>
@@ -151,18 +151,18 @@
 			</div>
 			<form action="" class="col-6 section2" method="post">
 				<h3 class="text-center mt-4">Create Your Account</h3>`
-				<p class="text-center">Hey! We have made this form reakky small so that its easy
+				<p class="text-center">Hey! We have made this form really small so that its easy
 					but that means all fields are mandatory &#128522;</p>
 				<br>
 				<label>How should we call you ?<span style="color: red;"><?php echo $msgs ?></span></label>
 				<div class="form-row">
 					<div class="form-group col">
 						<input type="text" class="form-control bdradius" placeholder="Firstname" name="firstname">
-						<label><small>Must be at least 4 characters</small></label>
+						<label style="font-size: 17px;">Must be at least 4 characters</label>
 					</div>
 					<div class="form-group col">
 						<input type="text" class="form-control bdradius" placeholder="lastname" name="lastname">
-						<label><small>Must be at least 4 characters</small></label>
+						<label style="font-size: 17px;">Must be at least 4 characters</label>
 					</div>
 				</div>
 				<label>So how should we contact you ?<span style="color:red"><?php echo $msgsa ?></span></label>

@@ -3,4 +3,4 @@
 // unset($_SESSION["email"]);
 // unset($_SESSION["name"]);
 // session_destroy();
-header('Location:./package.php');
+header('Location:./packages_view.php');

@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 //$_SESSION['name']
 ?>
 
@@ -235,43 +235,12 @@ include_once 'db.php';
 <?php
 $sql = "SELECT * FROM `package` WHERE `status`=1";
 $res = mysqli_query($conn, $sql);
-// 
+
+
+
 ?>
 <section>
-	<!--<div class="my" style="margin-top: 10px;">
-  <div class="text">
-    <h1>Explore Multiple Carrers</h1>
-  </div>
-  </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="my shadow-lg ">
-                    <div class="text">
-                        <h1><?php //echo $_SESSION['mname']; 
-							?></h1>
-                    </div>
-                </div>
-            </div>
-        </div>-->
-	<!-- <div class="container-fluid ">
-		<div class="row  ">
-			<div class="col-md-4 hero  ">
-				<img class="banner" src="./assets/images/567.jpg" alt="">-->
-	<!-- <div class="hero-text "> -->
 
-	<!-- <p>Travel is</p>
-				<p>AN INVESTMENT
-
-				<p>in yourself</p> -->
-
-
-
-	<!-- </div> -->
-
-
-	<!-- </div>
-		</div>  -->
 	<div class="container-fluid ">
 		<div id="bannerimage">
 			<span id="header mt-4">
@@ -318,7 +287,8 @@ $res = mysqli_query($conn, $sql);
 						</div>
 						<!-- <a href="<?php echo $data['packagelink'] ?>" class="btn btn-primary"
                             style="padding:5px; margin-top:10px;"><small>Book Now</small></a>-->
-						<button class="link card-button" id="<?php echo $data['id'] ?>"><small>Book Now</small></button>
+						<a href="./signin.php" style="text-decoration: none;text-decoration-color:#0000dd00;"> <button class="card-button" id=""><small>Book
+									Now</small></button></a>
 					</div>
 				</div>
 
@@ -337,50 +307,42 @@ include "footer.php";
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
-	var stripe = Stripe(
-		//"pk_test_51MxoMDSHmUtmPHhdBsulLPFprIByEfD8r6zJf5a8XfQE4L4ysQztAM6DiGMEoZaPEF4hBzS6CaVM4smoNp3EECnj00Ed6wvZIc"
-		"pk_test_51MVtNdBnZtwibCToxrLZPsaD59StXHoKnOuznzxxim276klhXpOmB8Aa2JU1eaWiUEXxJ7XWp5jeAPIVWoJd6nNl00VpaW9ZiH"
-	);
-	document.querySelectorAll('.link').forEach(function(link) {
-		link.addEventListener('click', function() {
-			var x = "<?php //echo $resultcheck;  
-						?> "
-			var my = "<?php //echo $gcheck;     
-						?> "
+	// var stripe = Stripe(
+	// 	//"pk_test_51MxoMDSHmUtmPHhdBsulLPFprIByEfD8r6zJf5a8XfQE4L4ysQztAM6DiGMEoZaPEF4hBzS6CaVM4smoNp3EECnj00Ed6wvZIc"
+	// 	"pk_test_51MVtNdBnZtwibCToxrLZPsaD59StXHoKnOuznzxxim276klhXpOmB8Aa2JU1eaWiUEXxJ7XWp5jeAPIVWoJd6nNl00VpaW9ZiH"
+	// );
+	// document.querySelectorAll('.link').forEach(function(link) {
+	// 	link.addEventListener('click', function() {
+	var x = "<?php //echo $resultcheck;  
+				// 					
+				?> "
+	var my = "<?php //echo $gcheck;     
+				// 					
+				?> "
 
 
-			// if (x > 0 || my > 0) {
-			id = this.getAttribute('id')
-			$.ajax({
-				url: 'checkout.php',
-				method: 'POST',
-				data: {
-					id: id,
-					// stripe_payment_process: 1
-				},
-				success: function(response) {
-					console.log(response)
-					return stripe.redirectToCheckout({
-						sessionId: response.id
-					});
-				}
+	// 		// if (x > 0 || my > 0){
+	// 	id = this.getAttribute('id')
+	// 	$.ajax({
+	// 		url: 'checkout.php',
+	// 		method: 'POST',
+	// 		data: {
+	// 			id: id,
+	// 			// stripe_payment_process: 1
+	// 		},
+	// 		success: function(response) {
+	// 			console.log(response)
+	// 			return stripe.redirectToCheckout({
+	// 				sessionId: response.id
+	// 			});
+	// 		}
 
-			});
-		})
-		// else {
-		// 	location.replace('login.php')
-		// 	//header("location:login.php");
-		// }
-
-
-
-
-
-
-
-
-
-
-
-	})
+	// 	});
+	// })
+	// else {
+	// 	location.replace('login.php')
+	// 	//hea
+	der("location:login.php");
+	// }
+	//})
 </script>
